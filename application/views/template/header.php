@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>UCare - Login</title>
+    <title><?php echo $title; ?></title>
 
     <!-- Date Picker -->
     <link href="<?php echo CuConfig::$siteUrl?>assets/plugins/datepicker/datepicker3.css">
