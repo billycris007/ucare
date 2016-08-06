@@ -2,7 +2,7 @@
     <div class="sidebar-nav navbar-collapse">
         <ul class="nav" id="side-menu">
             <li>
-                <a href="<?php echo CuConfig::$siteUrl?>user"><i class="fa fa-bar-chart-o fa-fw"></i> Users<span class="fa arrow"></span></a>
+                <a href="<?php echo CuConfig::$siteUrl?>user"><i class="fa fa-bar-chart-o fa-fw"></i> Users</span></a>
             </li>
             <li>
                 <a href="<?php echo CuConfig::$siteUrl?>organization"><i class="fa fa-bar-chart-o fa-fw"></i> Organization</a>

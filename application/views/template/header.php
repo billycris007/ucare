@@ -26,6 +26,9 @@
     <!-- Custom CSS -->
     <link href="<?php echo CuConfig::$siteUrl?>assets/css/sb-admin-2.css" rel="stylesheet">
 
+    <!-- Custom CSS -->
+    <link href="<?php echo CuConfig::$siteUrl?>assets/css/custom-style.css" rel="stylesheet">
+
     <!-- Custom Fonts -->
     <link href="<?php echo CuConfig::$siteUrl?>assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 

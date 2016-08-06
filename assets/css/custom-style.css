@@ -2,11 +2,26 @@
 html,
 body {
     height: 100%;
+    background: #fff;
 } 
 
 .navbar-brand {
-    margin-top: -8px;
-    max-width: 90%;
+  margin-left: 30px;
+  margin-top: -8px;
+  max-width: 90%;
+}
+.sidebar {
+  min-height: 100%;
+  border-right: 1px solid #e7e7e7;
+}
+
+.sidebar-nav{
+  min-height: 300px;
+}
+
+.navbar-default {
+  background-color: #f8f8f8!important;
+  border-color: #e7e7e7!important;
 }
 
 /* navbar header*/
