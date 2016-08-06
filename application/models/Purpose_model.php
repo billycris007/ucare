@@ -53,5 +53,9 @@ class Purpose_model extends CU_Model {
 		return $this->db->update($this->tb_name,$data,array('purpose_id'=>$id));
 	}
 
+    public function save($id, $path){ 
+    		$update = array('purpose_image' => $path); 
+		return $this->db->update($this->tb_name,$update,array('purpose_id'=>$id));  
+        }
 }
 ?>

@@ -19,6 +19,7 @@
 	                           <table id="purpose_list" class="display" cellspacing="0" width="100%">
 						        <thead>
 						            <tr>
+						                <th>Purpose Image</th>
 						                <th>Purpose Name</th>
 						                <th>Type</th>
 						                <th>Description</th>
@@ -38,6 +39,13 @@
 									$new_duedate = date_format($date,"F d, Y");
 								?>
 						            <tr>
+						            	<td width="10px">
+						            		<form action="<?php echo base_url().'upload-img'?>" method="POST" enctype="multipart/form-data">
+												<input type="file" name="userfile">
+												<input type="hidden" name="purpose_img_id" value="<?= $value->purpose_id?>"> 
+											<button type="submit" class="btn btn-xs btn-primary">Upload</button>
+											</form>
+						            	</td>
 						                <td><?= $value->name; ?></td>
 						                <td><?= $value->type; ?></td>
 						                <td><?= $value->description; ?></td>

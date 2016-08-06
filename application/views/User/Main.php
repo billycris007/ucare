@@ -50,7 +50,7 @@
             echo '
               <div class="col-sm-3 col-lg-3 col-md-3">
                   <div class="thumbnail posts">
-                      <img src="http://www.hindustantimes.com/Images/popup/2015/4/Quake3.jpg" class="img-responsive">
+                      <img src="'.$row->purpose_image.'" class="img-responsive">
                       <div class="caption"> 
                           <h4><a href="'.base_url().'individual-post">'.$row->name.'</a>
                           </h4>
@@ -63,7 +63,7 @@
             echo '
               <div class="col-sm-3 col-lg-3 col-md-3">
                   <div class="thumbnail posts">
-                      <img src="http://www.hindustantimes.com/Images/popup/2015/4/Quake3.jpg" class="img-responsive">
+                      <img src="'.$row->purpose_image.'" class="img-responsive">
                       <div class="caption"> 
                           <h4><a href="'.base_url().'individual-post">'.$row->name.'</a>
                           </h4>

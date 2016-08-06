@@ -27,7 +27,7 @@ class Purpose extends CU_Controller {
 
 	protected function allowAnonymous()
 	{
-		return false;
+		return TRUE;
 	}
 
 	public function index()
@@ -159,5 +159,22 @@ class Purpose extends CU_Controller {
    		return strTolower(preg_replace('/[^A-Za-z0-9\-]/', '', $string)); // Removes special chars.
 	}
 
+	   public function save(){
+        $path = $this->do_upload();
+        $id = trim($this->input->post('purpose_img_id'));
+       // $id = $_POST["purpose_img_id"];
+        $this->purpose_model->save($id, $path);
+    }
+
+    public function do_upload(){ 
+        $type = explode('.', $_FILES["userfile"]["name"]);
+        $type = strtolower($type[count($type)-1]);
+        $url = "assets/image/purpose_image/".uniqid(rand()).'.'.$type;
+        if(in_array($type, array("jpg", "jpeg", "gif", "png")))
+            if(is_uploaded_file($_FILES["userfile"]["tmp_name"]))
+                if(move_uploaded_file($_FILES["userfile"]["tmp_name"],$url))
+                    return $url;
+        return "";
+    }
 	
 }

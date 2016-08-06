@@ -59,6 +59,7 @@ $route['addPurpose'] = 'purpose/addPurpose';
 $route['updatePurpose'] = 'purpose/updatePurpose';
 $route['removepurpose'] = 'purpose/removePurpose';
 $route['isenable'] = 'purpose/isEnable';
+$route['upload-img'] = 'purpose/save';
 
 $route['addOrganization'] = 'organization/addOrganization';
 $route['updateOrganization'] = 'organization/updateOrganization';
