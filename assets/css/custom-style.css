@@ -241,6 +241,21 @@ section {
 /* End carousel */
 /*other posts carousel*/
 
+/*individual post*/
+.scrollable { 
+    height: 100%;
+    overflow: auto;
+    background: #fff;
+    padding: 5px;
+}
+.indiHeader {
+  max-width: 1266px;
+  height: 500px
+}
+.indiHeader img{
+  margin: 0 auto; 
+}
+/*individual post*/
 
 footer {
     margin-bottom: -20px;
