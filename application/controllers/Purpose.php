@@ -34,7 +34,8 @@ class Purpose extends CU_Controller {
 	{
 		$data['title'] = 'UCare';
 		$this->load->view('template/header',$data);
-		$this->load->view('template/menu_nav');
+		$this->load->view('template/topbar');
+		$this->load->view('template/leftnav');
 		$this->load->view('Purpose/index');
 		$this->load->view('template/footer');
 	}
