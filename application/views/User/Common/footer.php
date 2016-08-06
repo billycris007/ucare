@@ -8,6 +8,13 @@
 </body> 
 <!-- Script to Activate the Carousel -->
 <script> 
+	$(document).ready(function() {
+	  $('#media').carousel({
+	    pause: true,
+	    interval: false,
+	  });
+	});
+
   $('.carousel').carousel({
       interval: 5000 //changes the speed
   })

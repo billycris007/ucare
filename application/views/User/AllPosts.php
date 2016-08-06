@@ -44,13 +44,78 @@ Half Page Image Background Carousel Header -->
           <div class="thumbnail posts">
               <img src="http://www.hindustantimes.com/Images/popup/2015/4/Quake3.jpg" class="img-responsive">
               <div class="caption"> 
-                  <h4><a href="<?php echo base_url().'individual-post'?>">Yolanda Typhon - PH</a>
+                  <h4><a href="#">Yolanda Typhon - PH</a>
                   </h4>
-                  <p>Lots of Houses and Lives were lost and lots of families is in need your unlimited generousity <a href="<?php echo base_url().'individual-post'?>">Continue reading..</a>.</p>
+                  <p>Lots of Houses and Lives were lost and lots of families is in need your unlimited generousity <a href="">Continue reading..</a>.</p>
               </div> 
           </div>
       </div>
 
+      <div class="col-sm-3 col-lg-3 col-md-3">
+          <div class="thumbnail posts">
+              <img src="http://www.hindustantimes.com/Images/popup/2015/4/Quake3.jpg" class="img-responsive">
+              <div class="caption"> 
+                  <h4><a href="#">Yolanda Typhon - PH</a>
+                  </h4>
+                  <p>Lots of Houses and Lives were lost and lots of families is in need your unlimited generousity <a href="">Continue reading..</a>.</p>
+              </div> 
+          </div>
+      </div>
+
+      <div class="col-sm-3 col-lg-3 col-md-3">
+          <div class="thumbnail posts">
+              <img src="http://www.hindustantimes.com/Images/popup/2015/4/Quake3.jpg" class="img-responsive">
+              <div class="caption"> 
+                  <h4><a href="#">Yolanda Typhon - PH</a>
+                  </h4>
+                  <p>Lots of Houses and Lives were lost and lots of families is in need your unlimited generousity <a href="">Continue reading..</a>.</p>
+              </div> 
+          </div>
+      </div>
+
+      <div class="col-sm-3 col-lg-3 col-md-3">
+          <div class="thumbnail posts">
+              <img src="http://www.hindustantimes.com/Images/popup/2015/4/Quake3.jpg" class="img-responsive">
+              <div class="caption"> 
+                  <h4><a href="#">Yolanda Typhon - PH</a>
+                  </h4>
+                  <p>Lots of Houses and Lives were lost and lots of families is in need your unlimited generousity <a href="">Continue reading..</a>.</p>
+              </div> 
+          </div>
+      </div>
+
+      <div class="col-sm-3 col-lg-3 col-md-3">
+          <div class="thumbnail posts">
+              <img src="http://www.hindustantimes.com/Images/popup/2015/4/Quake3.jpg" class="img-responsive">
+              <div class="caption"> 
+                  <h4><a href="#">Yolanda Typhon - PH</a>
+                  </h4>
+                  <p>Lots of Houses and Lives were lost and lots of families is in need your unlimited generousity <a href="">Continue reading..</a>.</p>
+              </div> 
+          </div>
+      </div>
+
+      <div class="col-sm-3 col-lg-3 col-md-3">
+          <div class="thumbnail posts">
+              <img src="http://www.hindustantimes.com/Images/popup/2015/4/Quake3.jpg" class="img-responsive">
+              <div class="caption"> 
+                  <h4><a href="#">Yolanda Typhon - PH</a>
+                  </h4>
+                  <p>Lots of Houses and Lives were lost and lots of families is in need your unlimited generousity <a href="">Continue reading..</a>.</p>
+              </div> 
+          </div>
+      </div>
+      <div class="col-sm-3 col-lg-3 col-md-3">
+          <div class="thumbnail posts">
+              <img src="http://www.hindustantimes.com/Images/popup/2015/4/Quake3.jpg" class="img-responsive">
+              <div class="caption"> 
+                  <h4><a href="#">Yolanda Typhon - PH</a>
+                  </h4>
+                  <p>Lots of Houses and Lives were lost and lots of families is in need your unlimited generousity <a href="">Continue reading..</a>.</p>
+              </div> 
+          </div>
+      </div>  
+      
       <div class="col-sm-3 col-lg-3 col-md-3">
           <div class="thumbnail posts">
               <img src="http://www.hindustantimes.com/Images/popup/2015/4/Quake3.jpg" class="img-responsive">
@@ -105,6 +170,7 @@ Half Page Image Background Carousel Header -->
               </div> 
           </div>
       </div>
+
       <div class="col-sm-3 col-lg-3 col-md-3">
           <div class="thumbnail posts">
               <img src="http://www.hindustantimes.com/Images/popup/2015/4/Quake3.jpg" class="img-responsive">
@@ -114,78 +180,17 @@ Half Page Image Background Carousel Header -->
                   <p>Lots of Houses and Lives were lost and lots of families is in need your unlimited generousity <a href="">Continue reading..</a>.</p>
               </div> 
           </div>
-      </div> 
-
+      </div>
       <div class="col-sm-3 col-lg-3 col-md-3">
-          <h4>View more events.</h4>
-          <p>There are way a lot more events that may need your valuable help. Click the button below to see more</p>
-          <a class="btn btn-primary" target="_blank" href="">View More</a>
-      </div> 
+          <div class="thumbnail posts">
+              <img src="http://www.hindustantimes.com/Images/popup/2015/4/Quake3.jpg" class="img-responsive">
+              <div class="caption"> 
+                  <h4><a href="#">Yolanda Typhon - PH</a>
+                  </h4>
+                  <p>Lots of Houses and Lives were lost and lots of families is in need your unlimited generousity <a href="">Continue reading..</a>.</p>
+              </div> 
+          </div>
+      </div>  
   </div>  
 </div>
 <!-- list of purposes -->
-
-
-<!-- quote -->
-<section id="carousel">           
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-                <div class="quote"><i class="fa fa-quote-left fa-4x"></i></div>
-        <div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="3000">
-          <!-- Carousel indicators -->
-                  <ol class="carousel-indicators">
-            <li data-target="#fade-quote-carousel" data-slide-to="0"></li>
-            <li data-target="#fade-quote-carousel" data-slide-to="1"></li>
-            <li data-target="#fade-quote-carousel" data-slide-to="2" class="active"></li>
-                    <li data-target="#fade-quote-carousel" data-slide-to="3"></li>
-                    <li data-target="#fade-quote-carousel" data-slide-to="4"></li>
-                    <li data-target="#fade-quote-carousel" data-slide-to="5"></li>
-          </ol>
-          <!-- Carousel items -->
-          <div class="carousel-inner">
-            <div class="item">
-              <img src="<?php echo base_url()?>style/image/qoute/Mother Teresa.jpg" class="profile-circle">
-              <blockquote>
-                <p>It's not how much we give but how much love we put into giving.<br>
-                <small> Mother Teresa</small></p>
-              </blockquote> 
-            </div>
-            <div class="item">
-              <img src="<?php echo base_url()?>style/image/qoute/Anne Frank.jpg" class="profile-circle">
-              <blockquote>
-                <p>No one has ever become poor by giving.<br>
-                <small> Anne Frank</small></p>
-              </blockquote>
-            </div>
-            <div class="active item">
-              <img src="<?php echo base_url()?>style/image/qoute/John Holmes.jpg" class="profile-circle">
-              <blockquote>
-                <p>There is no exercise better for the heart than reaching down and lifting people up.<br><small> John Holmes</small></p>
-              </blockquote>
-            </div>
-              <div class="item">
-                <img src="<?php echo base_url()?>style/image/qoute/Jack Landon.jpg" class="profile-circle">
-                <blockquote>
-                <p>A bone to the dog is not charity. Charity is the bone shared with the dog, when you are just as hungry as the dog.<br><small>Jack Landon</small></p>
-              </blockquote>
-            </div>
-              <div class="item">
-                <img src="<?php echo base_url()?>style/image/qoute/Maya Angelou.jpg" class="profile-circle">
-                <blockquote>
-                <p>When we give cheerfully and accept gratefully, everyone is blessed.<br><small> Maya Angelou</small></p>
-              </blockquote>
-            </div>
-              <div class="item">
-                <img src="<?php echo base_url()?>style/image/qoute/John Bunyan.jpg" class="profile-circle">
-                <blockquote>
-                <p>You have not lived today until you have done something for someone who can never repay you.<br><small> John Bunyan</small></p>
-              </blockquote>
-            </div>
-          </div>
-        </div>
-      </div>              
-    </div>
-  </div>
-</section>
-<!-- quote -->

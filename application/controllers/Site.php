@@ -30,10 +30,27 @@ class Site extends CU_Controller {
 
 	public function index()
 	{
-		$data['title'] = 'U-Care';
+		$data['title'] = 'UCare';
 		$this->load->view('User/Common/header',$data);
 		$this->load->view('User/Common/navbar');
 		$this->load->view('User/Main');
 		$this->load->view('User/Common/footer');
 	}
+
+	public function showAllPosts(){
+		$data['title'] = 'All Recent Posts'; 
+		$this->load->view('User/Common/header',$data);
+		$this->load->view('User/Common/navbar');
+		$this->load->view('User/AllPosts');
+		$this->load->view('User/Common/footer');
+	}
+
+	public function individualPost(){
+		$data['title'] = 'Yolanda Typhon - PH'; 
+		$this->load->view('User/Common/header',$data);
+		$this->load->view('User/Common/navbar');
+		$this->load->view('User/individualPost');
+		$this->load->view('User/Common/footer');
+	}
+
 }
