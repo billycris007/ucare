@@ -68,7 +68,8 @@ class Purpose extends CU_Controller {
 					'description' => $desc,
 					'long_lat' => '10.315699:123.885437',
 					'type' => $type,
-					'delivery_date' => $new_duedate
+					'delivery_date' => $new_duedate,
+					'url_name' =>$this->cleanUrl($name)
 					);
 			$id = $this->purpose_model->insert($data);
 			// redirect to table
@@ -87,19 +88,41 @@ class Purpose extends CU_Controller {
 	* remove/delete
 	*/
 	public function removePurpose(){
-		$purposeId = $this->uri->segment(3);
+		$purposeId = trim($this->input->post('id'));
 		$id = $this->purpose_model->delete($purposeId);
-		redirect(CuConfig::$siteUrl.'purpose', 'refresh'); 
+		if($id){
+			$result = '{"d":"1","m":"Success.","e":"0"}';
+		}else{
+			$result = '{"d":"1","m":"has error.","e":"1"}';
+		}
+		echo $result;
 	}
 
 	/**
 	* update
 	*/
 	public function updatePurpose(){
-		$id = 4;
-		$data = ['description' => 'Help Build typhoon victims'];
-		$id = $this->purpose_model->update($id,$data);
-		echo "success ";
+		$id = trim($this->input->post('id'));
+		$e = trim($this->input->post('e'));
+		if($this->input->server('REQUEST_METHOD') == 'POST' && isset($e))
+		{
+			$ret = $this->purpose_model->get($id);
+			$data =  json_encode($this->load->view('Purpose/addPurpose',$ret, TRUE));
+			$result = '{"d":'.$data.',"m":"","e":"0"}';
+			echo $result;
+		}
+		else
+		{
+			$data = ['description' => 'Help Build typhoon victims'];
+			$id = $this->purpose_model->update($id,$data);
+			
+		}
+
+	}
+
+	public function cleanUrl($string){
+   		$string = str_replace(' ', '-', $string); // Replaces all spaces with hyphens.
+   		return preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
 	}
 
 	

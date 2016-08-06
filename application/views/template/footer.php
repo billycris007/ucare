@@ -16,8 +16,12 @@
 	<!-- datatable -->    
     <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
 
+    <!-- custom -->    
+    <script src="<?php echo CuConfig::$siteUrl?>assets/js/custom.js"></script>
+
     <script type="text/javascript">
 	//Date picker
+	var base_url = "<?php echo CuConfig::$siteUrl?>";
     $('#datepicker').datepicker({
       autoclose: true
     });

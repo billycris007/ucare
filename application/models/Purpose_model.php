@@ -16,13 +16,14 @@ class Purpose_model extends CU_Model {
 
 	public function get($id = null){
 		if($id){
-			$this->db->where('purpose_id =',$id);
+			$this->db->where('purpose.purpose_id =',$id);
 		}else{
-			$this->db->where('purpose_id !=',null);
+			$this->db->where('purpose.purpose_id !=',null);
 		}
 		$this->db->select('*');
 		$this->db->from($this->tb_name);
-		$this->db->order_by('created_date', 'DESC');
+		$this->db->join('organization', 'organization.org_id = purpose.org_id'); 
+		$this->db->order_by('purpose.created_date', 'DESC');
 		$result = $this->db->get();
 		return $result->result();
 	}

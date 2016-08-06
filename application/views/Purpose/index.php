@@ -7,7 +7,7 @@
 	    <!-- /.col-lg-12 -->
 	</div>
 	<div class="row">
-	    <div class="col-lg-12">
+	    <div class="col-lg-12 panel_container">
 	        <div class="panel panel-primary">
 	            <div class="panel-heading">
 	            	Purpose List
@@ -41,9 +41,9 @@
 					                <td><?= $value->description; ?></td>
 					                <td><?= $new_duedate; ?></td>
 					                <td><?= ($value->funds)?number_format($value->funds,2):'0.00'; ?></td>
-					                <td><a href="#">Edit</a></td>
+					                <td><a class="edit_purpose" data="{'id':'<?= $value->purpose_id ?>'}" href="javascript:void(0)">Edit</a></td>
 					                <td><a href="#">Details</a></td>
-					                <td><a href="<?= CuConfig::$siteUrl.'purpose/removePurpose/'.$value->purpose_id ?>">Delete</a></td>
+					                <td><a class="remove_purpose" data="{'id':'<?= $value->purpose_id ?>'}" href="javascript:void(0)">Delete</a></td>
 					            </tr>
 					        <?php } ?>
 					        </tbody>
