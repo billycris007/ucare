@@ -110,39 +110,39 @@
           <!-- Carousel items -->
           <div class="carousel-inner">
             <div class="item">
-              <img src="<?php echo base_url()?>style/image/qoute/Mother Teresa.jpg" class="profile-circle">
+              <img src="<?php echo base_url()?>assets/image/qoute/Mother Teresa.jpg" class="profile-circle">
               <blockquote>
                 <p>It's not how much we give but how much love we put into giving.<br>
                 <small> Mother Teresa</small></p>
               </blockquote> 
             </div>
             <div class="item">
-              <img src="<?php echo base_url()?>style/image/qoute/Anne Frank.jpg" class="profile-circle">
+              <img src="<?php echo base_url()?>assets/image/qoute/Anne Frank.jpg" class="profile-circle">
               <blockquote>
                 <p>No one has ever become poor by giving.<br>
                 <small> Anne Frank</small></p>
               </blockquote>
             </div>
             <div class="active item">
-              <img src="<?php echo base_url()?>style/image/qoute/John Holmes.jpg" class="profile-circle">
+              <img src="<?php echo base_url()?>assets/image/qoute/John Holmes.jpg" class="profile-circle">
               <blockquote>
                 <p>There is no exercise better for the heart than reaching down and lifting people up.<br><small> John Holmes</small></p>
               </blockquote>
             </div>
               <div class="item">
-                <img src="<?php echo base_url()?>style/image/qoute/Jack Landon.jpg" class="profile-circle">
+                <img src="<?php echo base_url()?>assets/image/qoute/Jack Landon.jpg" class="profile-circle">
                 <blockquote>
                 <p>A bone to the dog is not charity. Charity is the bone shared with the dog, when you are just as hungry as the dog.<br><small>Jack Landon</small></p>
               </blockquote>
             </div>
               <div class="item">
-                <img src="<?php echo base_url()?>style/image/qoute/Maya Angelou.jpg" class="profile-circle">
+                <img src="<?php echo base_url()?>assets/image/qoute/Maya Angelou.jpg" class="profile-circle">
                 <blockquote>
                 <p>When we give cheerfully and accept gratefully, everyone is blessed.<br><small> Maya Angelou</small></p>
               </blockquote>
             </div>
               <div class="item">
-                <img src="<?php echo base_url()?>style/image/qoute/John Bunyan.jpg" class="profile-circle">
+                <img src="<?php echo base_url()?>assets/image/qoute/John Bunyan.jpg" class="profile-circle">
                 <blockquote>
                 <p>You have not lived today until you have done something for someone who can never repay you.<br><small> John Bunyan</small></p>
               </blockquote>
