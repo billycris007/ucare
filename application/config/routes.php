@@ -65,6 +65,12 @@ $route['addOrganization'] = 'organization/addOrganization';
 $route['updateOrganization'] = 'organization/updateOrganization';
 $route['removeOrganization'] = 'organization/removeOrganization';
 
+$route['addUser'] = 'user/addUser';
+$route['updateUser'] = 'user/updateUser';
+$route['removeUser'] = 'user/removeUser';
+$route['checkEmail'] = 'user/checkEmail';
+
+$route['validate'] = 'login/validate';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

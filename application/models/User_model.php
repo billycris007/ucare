@@ -21,7 +21,6 @@ class User_model extends CU_Model {
         	$data->errorMsg = "All fields are required.";
             return $data;
         }
-		
 		//Check against user table
         self::$dbConnection->where('email', $user->email); 
         $query = self::$dbConnection->get(self::TABLE_NAME);

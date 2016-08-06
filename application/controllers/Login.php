@@ -43,7 +43,7 @@ class Login extends CU_Controller {
 			$link = SessionUtil::getLastVisitedPage();
 			if (!isset($link)) 
 			{
-				$link = CuConfig::$siteUrl . "home/";
+				$link = CuConfig::$siteUrl . "user/";
 			}
 			redirect($link, 'refresh');
 		}else{
