@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 06, 2016 at 08:00 PM
+-- Generation Time: Aug 06, 2016 at 10:54 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS `organization` (
   `org_description` text COLLATE utf8_unicode_ci NOT NULL,
   `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`org_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `organization`
@@ -71,6 +71,7 @@ CREATE TABLE IF NOT EXISTS `purpose` (
   `funds` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `description` text COLLATE utf8_unicode_ci NOT NULL,
   `url_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `isEnable` int(1) NOT NULL DEFAULT '1',
   `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`purpose_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=12 ;
@@ -79,9 +80,9 @@ CREATE TABLE IF NOT EXISTS `purpose` (
 -- Dumping data for table `purpose`
 --
 
-INSERT INTO `purpose` (`purpose_id`, `org_id`, `name`, `long_lat`, `type`, `delivery_date`, `funds`, `description`, `url_name`, `created_date`) VALUES
-(8, 1, 'Earthquake', '10.315699:123.885437', 'Earthquake', '2016-08-30 00:00:00', '', 'Help Build typhoon victims', '', '2016-08-06 17:49:50'),
-(11, 1, 'walay tugpahay * 101', '10.315699:123.885437', 'Fire', '2016-08-30 00:00:00', '', 'Help Build typhoon victims', 'walay-tugpahay--101', '2016-08-06 17:49:20');
+INSERT INTO `purpose` (`purpose_id`, `org_id`, `name`, `long_lat`, `type`, `delivery_date`, `funds`, `description`, `url_name`, `isEnable`, `created_date`) VALUES
+(8, 1, 'Earthquake in bohol test', '10.315699:123.885437', 'Fire', '2016-08-30 00:00:00', '', 'Help Build typhoon victims hello world', 'earthquake-in-bohol-test', 1, '2016-08-06 20:08:26'),
+(11, 1, 'walay tugpahay * 101', '10.315699:123.885437', 'Fire', '2016-08-30 00:00:00', '', 'Help Build typhoon victims', 'walay-tugpahay--101', 1, '2016-08-06 20:08:29');
 
 -- --------------------------------------------------------
 

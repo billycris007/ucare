@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Purpose extends CU_Controller {
+class Organization extends CU_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -22,7 +22,7 @@ class Purpose extends CU_Controller {
 	function __construct()
 	{
 		parent::__construct();
-		$this->load->model('purpose_model');
+		$this->load->model('organization_model');
 	}
 
 	protected function allowAnonymous()
@@ -33,11 +33,11 @@ class Purpose extends CU_Controller {
 	public function index()
 	{
 		$data['title'] = 'UCare';
-		$data['list'] = $this->purpose_model->get();
+		$data['list'] = $this->organization_model->get();
 		$this->load->view('template/header',$data);
 		$this->load->view('template/topbar');
 		$this->load->view('template/leftnav');
-		$this->load->view('Purpose/index',$data);
+		$this->load->view('organization/index',$data);
 		$this->load->view('template/footer');
 	}
 
@@ -60,33 +60,24 @@ class Purpose extends CU_Controller {
 	/**
 	* add purpose
 	*/
-	public function addPurpose(){
+	public function addOrganization(){
 		if($this->input->server('REQUEST_METHOD') == 'POST')
 		{
-			$name = trim($this->input->post('p_name'));
-			$type = trim($this->input->post('p_type'));
-			$duedate = trim($this->input->post('p_duedate'));
-			$desc = trim($this->input->post('p_desc'));
+			$name = trim($this->input->post('org_name'));
+			$desc = trim($this->input->post('org_desc'));
 
-			$date = date_create($duedate);
-			$new_duedate = date_format($date,"Y-m-d");
-
-			$data = array('name' => $name,
-					'description' => $desc,
-					'long_lat' => '10.315699:123.885437',
-					'type' => $type,
-					'delivery_date' => $new_duedate,
-					'url_name' =>$this->cleanUrl($name)
+			$data = array('org_name' => $name,
+					'org_description' => $desc
 					);
-			$id = $this->purpose_model->insert($data);
+			$id = $this->organization_model->insert($data);
 			// redirect to table
-			redirect(CuConfig::$siteUrl.'purpose', 'refresh'); 
+			redirect(CuConfig::$siteUrl.'organization', 'refresh'); 
 		}else{
 			$data['title'] = 'UCare';
 			$this->load->view('template/header',$data);
 			$this->load->view('template/topbar');
 			$this->load->view('template/leftnav');
-			$this->load->view('Purpose/addPurpose');
+			$this->load->view('organization/addOrganization');
 			$this->load->view('template/footer');
 		}
 	}
@@ -94,9 +85,9 @@ class Purpose extends CU_Controller {
 	/**
 	* remove/delete
 	*/
-	public function removePurpose(){
+	public function removeOrganization(){
 		$purposeId = trim($this->input->post('id'));
-		$id = $this->purpose_model->delete($purposeId);
+		$id = $this->organization_model->delete($purposeId);
 		if($id){
 			$result = '{"d":"1","m":"Success.","e":"0"}';
 		}else{
@@ -108,34 +99,25 @@ class Purpose extends CU_Controller {
 	/**
 	* update
 	*/
-	public function updatePurpose(){
+	public function updateOrganization(){
 		$id = trim($this->input->post('id'));
 		$e = trim($this->input->post('e'));
 		if($this->input->server('REQUEST_METHOD') == 'POST' && (isset($e)&& $e!=0))
 		{
-			$ret['data'] = $this->purpose_model->get($id);
-			$data =  json_encode($this->load->view('Purpose/addPurpose',$ret, TRUE));
+			$ret['data'] = $this->organization_model->get($id);
+			$data =  json_encode($this->load->view('organization/addOrganization',$ret, TRUE));
 			$result = '{"d":'.$data.',"m":"","e":"0"}';
 			echo $result;
 		}
 		else
 		{
-			$name = trim($this->input->post('p_name'));
-			$type = trim($this->input->post('p_type'));
-			$duedate = trim($this->input->post('p_duedate'));
-			$desc = trim($this->input->post('p_desc'));
+			$name = trim($this->input->post('org_name'));
+			$desc = trim($this->input->post('org_desc'));
 
-			$date = date_create($duedate);
-			$new_duedate = date_format($date,"Y-m-d");
-
-			$data = array('name' => $name,
-					'description' => $desc,
-					'long_lat' => '10.315699:123.885437',
-					'type' => $type,
-					'delivery_date' => $new_duedate,
-					'url_name' =>$this->cleanUrl($name)
+			$data = array('org_name' => $name,
+					'org_description' => $desc
 					);
-			$id = $this->purpose_model->update($id,$data);
+			$id = $this->organization_model->update($id,$data);
 			if($id){
 				$result = '{"d":"1","m":"Success.","e":"0"}';
 			}else{
@@ -146,14 +128,6 @@ class Purpose extends CU_Controller {
 
 	}
 
-	public function isEnable(){
-		$id = $this->uri->segment(3);
-		$stat = $this->uri->segment(4);
-		$data = ['isEnable'=>$stat];
-		$id = $this->purpose_model->update($id,$data);
-		// redirect to table
-		redirect(CuConfig::$siteUrl.'purpose', 'refresh'); 
-	}
 	public function cleanUrl($string){
    		$string = str_replace(' ', '-', $string); // Replaces all spaces with hyphens.
    		return strTolower(preg_replace('/[^A-Za-z0-9\-]/', '', $string)); // Removes special chars.
