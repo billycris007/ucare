@@ -23,7 +23,7 @@ class Purpose_model extends CU_Model {
 		$this->db->select('*');
 		$this->db->from($this->tb_name);// I use aliasing make things joins easier
 		$result = $this->db->get();
-		return (object)$result->result();
+		return $result->result();
 	}
 	public function insert($data){
 		self::$dbConnection->insert($this->tb_name,$data);

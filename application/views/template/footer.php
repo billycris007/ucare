@@ -13,11 +13,16 @@
     <!-- Date Picker -->
     <script src="<?php echo CuConfig::$siteUrl?>assets/plugins/datepicker/bootstrap-datepicker.js"></script>
 
+	<!-- datatable -->    
+    <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+
     <script type="text/javascript">
 	//Date picker
     $('#datepicker').datepicker({
       autoclose: true
     });
+
+    $('#purpose_list').DataTable();
 
 </script>
 </body>

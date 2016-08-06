@@ -33,10 +33,11 @@ class Purpose extends CU_Controller {
 	public function index()
 	{
 		$data['title'] = 'UCare';
+		$data['list'] = $this->purpose_model->get();
 		$this->load->view('template/header',$data);
 		$this->load->view('template/topbar');
 		$this->load->view('template/leftnav');
-		$this->load->view('Purpose/index');
+		$this->load->view('Purpose/index',$data);
 		$this->load->view('template/footer');
 	}
 
@@ -53,23 +54,39 @@ class Purpose extends CU_Controller {
 	* add purpose
 	*/
 	public function addPurpose(){
-		$data = array('name' => 'Typhoon Victim',
-				'description' => '',
-				'long_lat' => '10.315699:123.885437',
-				'type' => 'Typhoon',
-				'delivery_date' => ''
-				);
-		$id = $this->purpose_model->insert($data);
-		echo "ID = ".$id;
+		if($this->input->server('REQUEST_METHOD') == 'POST')
+		{
+			$name = trim($this->input->post('p_name'));
+			$type = trim($this->input->post('p_type'));
+			$duedate = trim($this->input->post('p_duedate'));
+			$desc = trim($this->input->post('p_desc'));
+
+			$data = array('name' => $name,
+					'description' => $desc,
+					'long_lat' => '10.315699:123.885437',
+					'type' => $type,
+					'delivery_date' => $duedate
+					);
+			$id = $this->purpose_model->insert($data);
+			// redirect to table
+			redirect(CuConfig::$siteUrl.'purpose', 'refresh'); 
+		}else{
+			$data['title'] = 'UCare';
+			$this->load->view('template/header',$data);
+			$this->load->view('template/topbar');
+			$this->load->view('template/leftnav');
+			$this->load->view('Purpose/addPurpose');
+			$this->load->view('template/footer');
+		}
 	}
 
 	/**
 	* remove/delete
 	*/
 	public function removePurpose(){
-		$purposeId = 3;
+		$purposeId = $this->uri->segment(3);
 		$id = $this->purpose_model->delete($purposeId);
-		echo "test = ".$id;
+		redirect(CuConfig::$siteUrl.'purpose', 'refresh'); 
 	}
 
 	/**

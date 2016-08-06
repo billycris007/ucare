@@ -1,7 +1,8 @@
 <div id="page_wrapper" class="col-md-10">
 	<div class="row">
 	    <div class="col-lg-12">
-	        <h1 class="page-header">Funding Purpose</h1>
+	        <h3 class="page-header">Funding Purpose <a href="<?php echo CuConfig::$siteUrl?>purpose/addPurpose" class="btn btn-success" type="button">Add Purpose</a></h3>
+
 	    </div>
 	    <!-- /.col-lg-12 -->
 	</div>
@@ -9,44 +10,42 @@
 	    <div class="col-lg-12">
 	        <div class="panel panel-primary">
 	            <div class="panel-heading">
-	            	Add Purpose
+	            	Purpose List
 	            </div>
 	            <!-- /.panel-heading -->
 	            <div class="panel-body">
-	            	<form role="form">
-                        <div class="form-group">
-                            <label>Purpose Name <span class="text-danger"> *</span></label>
-                            <input required class="form-control">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label>Type <span class="text-danger"> *</span></label>
-                            <select required class="form-control">
-                                <option>Fire</option>
-                                <option>Typhoon</option>
-                                <option>Earthquake</option>
-                                <option>Flood</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-			                <label>Due Date <span class="text-danger"> *</span></label>
-
-			                <div class="input-group date">
-			                  	<div class="input-group-addon">
-			                    	<i class="fa fa-calendar"></i>
-			                  	</div>
-			                  	<input required type="text" id="datepicker" class="form-control pull-right">
-			                </div>
-			            </div>
-
-			            <div class="form-group">
-                            <label>Description</label>
-                            <textarea class="form-control"></textarea>
-                        </div>
-
-                        <button class="btn btn-primary" type="submit">Submit Button</button>
-                        <button class="btn btn-danger" type="reset">Reset Button</button>
-                    </form>
+	            	<div class="dataTable_wrapper">
+                           <table id="purpose_list" class="display" cellspacing="0" width="100%">
+					        <thead>
+					            <tr>
+					                <th>Purpose Name</th>
+					                <th>Type</th>
+					                <th>Description</th>
+					                <th>Delivery Date</th>
+					                <th>Funds</th>
+					                <th></th>
+					                <th></th>
+					                <th></th>
+					            </tr>
+					        </thead>
+					        <tfoot>
+					        </tfoot>
+					        <tbody>
+					        <?php  foreach ($list as $key => $value) { ?>
+					            <tr>
+					                <td><?= $value->name; ?></td>
+					                <td><?= $value->type; ?></td>
+					                <td><?= $value->description; ?></td>
+					                <td><?= $value->delivery_date; ?></td>
+					                <td><?= ($value->funds)?number_format($value->funds,2):'0.00'; ?></td>
+					                <td><a href="#">Edit</a></td>
+					                <td><a href="#">Details</a></td>
+					                <td><a href="<?= CuConfig::$siteUrl.'purpose/removePurpose/'.$value->purpose_id ?>">Delete</a></td>
+					            </tr>
+					        <?php } ?>
+					        </tbody>
+					    </table>     
+                    </div>
 	            </div>
 	            <!-- /.panel-body -->
 	        </div>
