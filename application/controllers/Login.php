@@ -17,9 +17,9 @@ class Login extends CU_Controller {
 	{
 		//echo "login page";
 		$data['error'] = $this->input->get('error');
-		$this->load->view('login/header',$data);
+		$this->load->view('template/header',$data);
 		$this->load->view('login/login',$data);
-		$this->load->view('login/footer',$data);
+		$this->load->view('template/footer',$data);
 	}
 	
 	public function validate()
