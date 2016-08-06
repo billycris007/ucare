@@ -3,7 +3,7 @@
 class CuConfig
 {
 	//URL Configuration
-    public static $siteUrl = "http://localhost:81/ci/";
+    public static $siteUrl = "http://localhost:81/ucare/";
 	//Prefix used in session data
     public static $prefix = "";
 	

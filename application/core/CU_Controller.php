@@ -41,7 +41,7 @@ class CU_Controller extends CI_Controller
 				//SET the last visited page in session and redirect to login page
 			    //SessionUtil::setLastVisitedPage(AppConfig::$url . $this->uri->uri_string());
 				SessionUtil::setLastVisitedPage(CuConfig::$siteUrl . $this->uri->uri_string());
-				redirect(CuConfig::$siteUrl.'login/', 'refresh');
+				redirect(CuConfig::$siteUrl.'login', 'refresh');
 			}
 		}
 		
