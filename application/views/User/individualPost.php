@@ -6,12 +6,13 @@
     <div class="row">  
         <div class="col-md-12"> 
             <div class="thumbnail" style="padding: 20px">
-                 <div class="indiHeader"><img class="img-responsive" src="<?php echo base_url()?>assets/image/dummy.jpg" alt=""></div>
+              <?php 
+                foreach ($purpose as $row) {?>
+                 <div style="margin: 0 auto; float: 0 none;"><img class="img-responsive indiHeader" src="<?php echo base_url().''.$row->purpose_image?>" alt=""></div>
                 <div class="caption-full">
                   <div class="row">
                     <div class="col-md-8">
-                    <?php 
-                      foreach ($purpose as $row) {
+                    <?php  
                         echo ' 
                           <h1><strong><a href="">'.$row->name.' - '.$row->org_name.'</a></strong> <br><p><small>'.date('F j, Y', strtotime($row->created_date)).'</small></p>
                           </h1>
