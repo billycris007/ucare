@@ -52,7 +52,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'site'; 
 $route['all-recent-posts'] = 'site/showAllPosts';
 $route['individual-post'] = 'site/individualPost';
-$route[':any/:any'] = 'site/showIndiPost';  
+$route[':any/:any'] = 'site/showIndiPost';
+
+
+$route['addPurpose'] = 'purpose/addPurpose';
+$route['updatePurpose'] = 'purpose/updatePurpose';
+$route['removepurpose'] = 'purpose/removePurpose';
+$route['isenable'] = 'purpose/isEnable';
+
+$route['addOrganization'] = 'organization/addOrganization';
+$route['updateOrganization'] = 'organization/updateOrganization';
+$route['removeOrganization'] = 'organization/removeOrganization';
+
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
