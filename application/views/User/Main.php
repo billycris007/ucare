@@ -52,7 +52,7 @@
                   <div class="thumbnail posts">
                       <img src="'.$row->purpose_image.'" class="img-responsive">
                       <div class="caption"> 
-                          <h4><a href="'.base_url().'individual-post">'.$row->name.'</a>
+                          <h4><a href="'.substr($row->description, 0, 93).' <a href="'.base_url().''.str_replace(' ','-',strtolower($row->org_name)).'/'.$row->url_name.'">'.$row->name.'</a>
                           </h4>
                           <p>'.substr($row->description, 0, 93).' <a href="'.base_url().''.str_replace(' ','-',strtolower($row->org_name)).'/'.$row->url_name.'">Continue reading..</a>.</p>
                       </div> 
@@ -65,7 +65,7 @@
                   <div class="thumbnail posts">
                       <img src="'.$row->purpose_image.'" class="img-responsive">
                       <div class="caption"> 
-                          <h4><a href="'.base_url().'individual-post">'.$row->name.'</a>
+                          <h4><a href="'.base_url().''.str_replace(' ','-',strtolower($row->org_name)).'/'.$row->url_name.'">'.$row->name.'</a>
                           </h4>
                           <p>'.$row->description.' <a href="'.base_url().''.str_replace(' ','-',strtolower($row->org_name)).'/'.$row->url_name.'">Continue reading..</a>.</p>
                       </div> 
