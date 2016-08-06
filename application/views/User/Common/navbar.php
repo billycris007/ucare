@@ -14,8 +14,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
       <ul class="nav navbar-nav navbar-right">
-        <li class="text-center"><a href="<?php echo base_url().'all-recent-posts';?>">All Updates</a></li>  
-        <li class="text-center"><a href="">Terms & Policy</a></li>  
+        <li class="text-center"><a href="<?php echo base_url().'all-recent-posts';?>">All Updates</a></li>   
         <li class="text-center donate"><a href="#"><strong>Donate Now</strong></a></li> 
       </ul>
     </div><!-- /.navbar-collapse -->

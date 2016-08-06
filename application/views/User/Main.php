@@ -43,24 +43,36 @@
   <div class="row"> 
     <?php   
       $ctr = 0;
-      foreach ($allPurpose as $list) {  
+      foreach ($purpose as $row) { 
         if ( $ctr < 7) {
           $description = '';
-          if(strlen($list->description) > 93){
-            $description = substr($list->description, 0, 93); 
+          if(strlen($row->description) > 93){ 
             echo '
               <div class="col-sm-3 col-lg-3 col-md-3">
                   <div class="thumbnail posts">
                       <img src="http://www.hindustantimes.com/Images/popup/2015/4/Quake3.jpg" class="img-responsive">
                       <div class="caption"> 
-                          <h4><a href="'.base_url().'individual-post">'.$list->name.'</a>
+                          <h4><a href="'.base_url().'individual-post">'.$row->name.'</a>
                           </h4>
-                          <p>'.$description.' <a href="'.base_url().''.str_replace(' ','-',strtolower($list->name)).'/'.str_replace(' ','-',strtolower($list->name)).'">Continue reading..</a>.</p>
+                          <p>'.substr($row->description, 0, 93).' <a href="'.base_url().''.str_replace(' ','-',strtolower($row->org_name)).'/'.$row->url_name.'">Continue reading..</a>.</p>
                       </div> 
                   </div>
               </div>
             '; 
-          } 
+          }else{
+            echo '
+              <div class="col-sm-3 col-lg-3 col-md-3">
+                  <div class="thumbnail posts">
+                      <img src="http://www.hindustantimes.com/Images/popup/2015/4/Quake3.jpg" class="img-responsive">
+                      <div class="caption"> 
+                          <h4><a href="'.base_url().'individual-post">'.$row->name.'</a>
+                          </h4>
+                          <p>'.$row->description.' <a href="'.base_url().''.str_replace(' ','-',strtolower($row->org_name)).'/'.$row->url_name.'">Continue reading..</a>.</p>
+                      </div> 
+                  </div>
+              </div>
+            '; 
+          }
           $ctr += 1;
         }
       }

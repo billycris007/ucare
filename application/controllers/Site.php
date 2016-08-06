@@ -34,7 +34,8 @@ class Site extends CU_Controller {
 		$data['title'] = 'UCare';
 		$this->load->view('User/Common/header',$data);
 		$this->load->view('User/Common/navbar');
-		$data['allPurpose'] = $this->purpose_model->get();
+		$data['allPurpose'] = $this->purpose_model->get(); 
+		$data['purpose'] = $this->purpose_model->get(); 
 		$this->load->view('User/Main',$data);
 		$this->load->view('User/Common/footer');
 	}
@@ -42,24 +43,21 @@ class Site extends CU_Controller {
 	public function showAllPosts(){
 		$data['title'] = 'All Recent Posts'; 
 		$this->load->view('User/Common/header',$data);
-		$this->load->view('User/Common/navbar');
-		$this->load->view('User/AllPosts');
+		$this->load->view('User/Common/navbar');  
+		$data['purpose'] = $this->purpose_model->get(); 
+		$this->load->view('User/AllPosts',$data);
 		$this->load->view('User/Common/footer');
-	}
-
-	public function individualPost(){
-		$data['title'] = 'Yolanda Typhon - PH'; 
-		$this->load->view('User/Common/header',$data);
-		$this->load->view('User/Common/navbar');
-		$this->load->view('User/individualPost');
-		$this->load->view('User/Common/footer');
-	}
+	} 
 
 	public function showIndiPost(){
-		$data['title'] =ucwords(str_replace('-',' ',strtolower($this->uri->segment(2))));
+		$data['title'] = ucwords(str_replace('-',' ',strtolower($this->uri->segment(2))));
 		$this->load->view('User/Common/header',$data);
-		$this->load->view('User/Common/navbar');
-		$this->load->view('User/individualPost');
+		$this->load->view('User/Common/navbar'); 
+
+        $purpose_url = $this->uri->segment(2); 
+        $data['purpose'] = $this->purpose_model->getUrl($purpose_url);
+ 
+		$this->load->view('User/individualPost',$data);
 		$this->load->view('User/Common/footer');
 	}
 

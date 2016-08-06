@@ -27,6 +27,15 @@ class Purpose_model extends CU_Model {
 		$result = $this->db->get();
 		return $result->result();
 	}
+
+	public function getUrl($purpose_url){ 
+        $this->db->select('*');
+        $this->db->from('purpose');
+        $this->db->where('url_name',$purpose_url);
+        $result = $this->db->get();
+        return $result->result();
+	}
+
 	public function insert($data){
 		self::$dbConnection->insert($this->tb_name,$data);
 		return $this->getLastInserted();
