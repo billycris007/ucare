@@ -17,6 +17,7 @@ class Login extends CU_Controller {
 	{
 		//echo "login page";
 		$data['error'] = $this->input->get('error');
+		$data['title'] = "UCare - Home";
 		$this->load->view('template/header',$data);
 		$this->load->view('login/login',$data);
 		$this->load->view('template/footer',$data);
@@ -42,7 +43,7 @@ class Login extends CU_Controller {
 			$link = SessionUtil::getLastVisitedPage();
 			if (!isset($link)) 
 			{
-				$link = CuConfig::$siteUrl . "main/";
+				$link = CuConfig::$siteUrl . "home/";
 			}
 			redirect($link, 'refresh');
 		}else{

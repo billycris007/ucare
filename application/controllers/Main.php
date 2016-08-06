@@ -14,7 +14,11 @@ class Main extends CU_Controller {
 	
 	public function index()
 	{
-		echo "welcome to main page";
+		$data['error'] = $this->input->get('error');
+		$data['title'] = "UCare - Home";
+		$this->load->view('template/header',$data);
+		$this->load->view('home',$data);
+		$this->load->view('template/footer',$data);
 	}
 	
 }

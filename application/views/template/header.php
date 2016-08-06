@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>UCare - Login</title>
+    <title><?php echo $title; ?></title>
 
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo CuConfig::$siteUrl?>assets/css/bootstrap.min.css" rel="stylesheet">
