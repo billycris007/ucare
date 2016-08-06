@@ -1,38 +1,175 @@
+
+html,
+body {
+    height: 100%;
+}
+
+.navbar-brand {
+    margin-top: -8px;
+    max-width: 90%;
+}
+
 /* navbar */
 .navbar-default {
-    background-color: #0095FF;
-    border-color: #0060FF;
+    background-color: #fff;
+    border-color: #428bca;
 }
 /* title */
 .navbar-default .navbar-brand {
-    color: #fff;
+    color: #428bca;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-    color: #fff;
+    color: #0060FF;
 }
 /* link */
 .navbar-default .navbar-nav > li > a {
-    color: #fff;
+    color: #0060FF;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
     color: #fff;
+    background: #428bca;
 }
 .navbar-default .navbar-nav > .active > a, 
 .navbar-default .navbar-nav > .active > a:hover, 
 .navbar-default .navbar-nav > .active > a:focus {
     color: #fff;
-    background-color: #0060FF;
+    background-color: #428bca;
 }
 .navbar-default .navbar-nav > .open > a, 
 .navbar-default .navbar-nav > .open > a:hover, 
 .navbar-default .navbar-nav > .open > a:focus {
     color: #fff;
-    background-color: #0060FF;
+    background-color: #428bca;
+} 
+/*navbar*/
+
+/* navbar */
+.navbar-inverse {
+    background-color: #428bca;
+    border-color: #428bca;
 }
-/* caret */
-.navbar-default .navbar-nav > .dropdown > a .caret {
-    border-top-color: #0060FF;
-    border-bottom-color: #0060FF;
+/* title */
+.navbar-inverse .navbar-brand {
+    color: #fff;
+}
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+    color: #fff;
+}
+/* link */
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+    color: #fff;
+    background: #428bca;
+}
+.navbar-inverse .navbar-nav > .active > a, 
+.navbar-inverse .navbar-nav > .active > a:hover, 
+.navbar-inverse .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color: #428bca;
+}
+.navbar-inverse .navbar-nav > .open > a, 
+.navbar-inverse .navbar-nav > .open > a:hover, 
+.navbar-inverse .navbar-nav > .open > a:focus {
+    color: #fff;
+    background-color: #428bca;
+} 
+/*navbar*/
+
+/*carousel*/
+.carousel {
+    height: 50%;
+}
+
+.item,
+.active,
+.carousel-inner {
+    height: 100%;
+}
+.carousel-text {
+    background-color: #428bca; 
+    height: 80px; 
+    width: 150px; 
+    float: right; 
+    margin-bottom: -50px; 
+    margin-right: -100px;
+}
+/* Background images are set within the HTML using inline CSS, not here */
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+/*carousel*/
+
+section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.posts img{
+    width: 320px;
+    height: 120px;
+}
+
+.quote {
+    color: rgba(0,0,0,.1);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/*-------------------------------*/
+/*    Carousel Fade Transition   */
+/*-------------------------------*/
+
+#fade-quote-carousel.carousel {
+  padding-bottom: 60px;
+}
+#fade-quote-carousel.carousel .carousel-inner .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+      -ms-transition-property: opacity;
+          transition-property: opacity;
+}
+#fade-quote-carousel.carousel .carousel-inner .active {
+  opacity: 1;
+  -webkit-transition-property: opacity;
+      -ms-transition-property: opacity;
+          transition-property: opacity;
+}
+#fade-quote-carousel.carousel .carousel-indicators {
+  bottom: 10px;
+}
+#fade-quote-carousel.carousel .carousel-indicators > li {
+  background-color: #e84a64;
+  border: none;
+}
+#fade-quote-carousel blockquote {
+    text-align: center;
+    border: none;
+}
+#fade-quote-carousel .profile-circle {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 100px;
+}
+
+footer {
+    margin-bottom: -20px;
+} 
+
+footer p {
+    margin: 20px;
+    color: #fff;
 }

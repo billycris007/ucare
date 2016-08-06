@@ -8,14 +8,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">U - Care</a>
+      <a class="navbar-brand" href="#"><img src="<?php echo base_url()?>ucare.png" class="img-responsive" width="150px" height="150px"></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Terms</a></li> 
-        <li><a href="#">Policy</a></li> 
+        <li class="text-center"><a href="#">Terms & Policy</a></li>  
+        <li class="text-center"><a href="#"><span class="label label-primary">Donate Now</span></a></li> 
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
