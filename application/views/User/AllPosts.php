@@ -1,4 +1,5 @@
-Half Page Image Background Carousel Header -->
+
+<!--Half Page Image Background Carousel Header -->
 <header id="myCarousel" class="carousel slide"> 
 
     <!-- Wrapper for Slides -->
