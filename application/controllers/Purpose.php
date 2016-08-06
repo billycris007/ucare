@@ -27,7 +27,7 @@ class Purpose extends CU_Controller {
 
 	protected function allowAnonymous()
 	{
-		return TRUE;
+		return FALSE;
 	}
 
 	public function index()
