@@ -10,6 +10,16 @@
     <!-- Custom Theme JavaScript -->
     <script src="<?php echo CuConfig::$siteUrl?>assets/js/sb-admin-2.js"></script>
 
+    <!-- Date Picker -->
+    <script src="<?php echo CuConfig::$siteUrl?>assets/plugins/datepicker/bootstrap-datepicker.js"></script>
+
+    <script type="text/javascript">
+	//Date picker
+    $('#datepicker').datepicker({
+      autoclose: true
+    });
+
+</script>
 </body>
 
 </html>

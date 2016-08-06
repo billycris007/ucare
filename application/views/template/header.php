@@ -11,6 +11,9 @@
 
     <title><?php echo $title; ?></title>
 
+    <!-- Date Picker -->
+    <link href="<?php echo CuConfig::$siteUrl?>assets/plugins/datepicker/datepicker3.css">
+    
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo CuConfig::$siteUrl?>assets/css/bootstrap.min.css" rel="stylesheet">
 
@@ -23,6 +26,10 @@
     <!-- Custom Fonts -->
     <link href="<?php echo CuConfig::$siteUrl?>assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <!-- Custom Fonts -->
+    <link href="<?php echo CuConfig::$siteUrl?>assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
