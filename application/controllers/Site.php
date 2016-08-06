@@ -21,6 +21,7 @@ class Site extends CU_Controller {
 	function __construct()
 	{
 		parent::__construct();
+		$this->load->model('purpose_model');
 	}
 
 	protected function allowAnonymous()
@@ -33,7 +34,8 @@ class Site extends CU_Controller {
 		$data['title'] = 'UCare';
 		$this->load->view('User/Common/header',$data);
 		$this->load->view('User/Common/navbar');
-		$this->load->view('User/Main');
+		$data['allPurpose'] = $this->purpose_model->get();
+		$this->load->view('User/Main',$data);
 		$this->load->view('User/Common/footer');
 	}
 
@@ -47,6 +49,14 @@ class Site extends CU_Controller {
 
 	public function individualPost(){
 		$data['title'] = 'Yolanda Typhon - PH'; 
+		$this->load->view('User/Common/header',$data);
+		$this->load->view('User/Common/navbar');
+		$this->load->view('User/individualPost');
+		$this->load->view('User/Common/footer');
+	}
+
+	public function showIndiPost(){
+		$data['title'] =ucwords(str_replace('-',' ',strtolower($this->uri->segment(2))));
 		$this->load->view('User/Common/header',$data);
 		$this->load->view('User/Common/navbar');
 		$this->load->view('User/individualPost');
