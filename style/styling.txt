@@ -1,0 +1,3 @@
+Standard Color:
+#0095FF
+#0060FF
