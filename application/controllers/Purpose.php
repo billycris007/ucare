@@ -19,8 +19,6 @@ class Purpose extends CU_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 
-	public $title = "U-care";
-
 	function __construct()
 	{
 		parent::__construct();
@@ -29,12 +27,16 @@ class Purpose extends CU_Controller {
 
 	protected function allowAnonymous()
 	{
-		return true;
+		return false;
 	}
 
 	public function index()
 	{
-		
+		$data['title'] = 'UCare';
+		$this->load->view('template/header',$data);
+		$this->load->view('template/menu_nav');
+		$this->load->view('Purpose/index');
+		$this->load->view('template/footer');
 	}
 
 	/**
