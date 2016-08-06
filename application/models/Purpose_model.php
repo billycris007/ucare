@@ -21,7 +21,8 @@ class Purpose_model extends CU_Model {
 			$this->db->where('purpose_id !=',null);
 		}
 		$this->db->select('*');
-		$this->db->from($this->tb_name);// I use aliasing make things joins easier
+		$this->db->from($this->tb_name);
+		$this->db->order_by('created_date', 'DESC');
 		$result = $this->db->get();
 		return $result->result();
 	}

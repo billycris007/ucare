@@ -61,11 +61,14 @@ class Purpose extends CU_Controller {
 			$duedate = trim($this->input->post('p_duedate'));
 			$desc = trim($this->input->post('p_desc'));
 
+			$date = date_create($duedate);
+			$new_duedate = date_format($date,"Y-m-d");
+
 			$data = array('name' => $name,
 					'description' => $desc,
 					'long_lat' => '10.315699:123.885437',
 					'type' => $type,
-					'delivery_date' => $duedate
+					'delivery_date' => $new_duedate
 					);
 			$id = $this->purpose_model->insert($data);
 			// redirect to table

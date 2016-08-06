@@ -1,4 +1,4 @@
-<div id="page_wrapper" class="col-md-10">
+<div id="page_wrapper" class="col-md-9">
 	<div class="row">
 	    <div class="col-lg-12">
 	        <h3 class="page-header">Funding Purpose <a href="<?php echo CuConfig::$siteUrl?>purpose/addPurpose" class="btn btn-success" type="button">Add Purpose</a></h3>
@@ -31,12 +31,15 @@
 					        <tfoot>
 					        </tfoot>
 					        <tbody>
-					        <?php  foreach ($list as $key => $value) { ?>
+					        <?php  foreach ($list as $key => $value) { 
+					        	$date = date_create($value->delivery_date);
+								$new_duedate = date_format($date,"F d, Y");
+							?>
 					            <tr>
 					                <td><?= $value->name; ?></td>
 					                <td><?= $value->type; ?></td>
 					                <td><?= $value->description; ?></td>
-					                <td><?= $value->delivery_date; ?></td>
+					                <td><?= $new_duedate; ?></td>
 					                <td><?= ($value->funds)?number_format($value->funds,2):'0.00'; ?></td>
 					                <td><a href="#">Edit</a></td>
 					                <td><a href="#">Details</a></td>
