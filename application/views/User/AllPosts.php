@@ -1,4 +1,5 @@
-Half Page Image Background Carousel Header -->
+
+<!--Half Page Image Background Carousel Header -->
 <header id="myCarousel" class="carousel slide"> 
 
     <!-- Wrapper for Slides -->
@@ -40,157 +41,38 @@ Half Page Image Background Carousel Header -->
 <div class="container"><br>
 <h2><strong>Latest Updates</strong></h2>
   <div class="row"> 
-      <div class="col-sm-3 col-lg-3 col-md-3">
-          <div class="thumbnail posts">
-              <img src="http://www.hindustantimes.com/Images/popup/2015/4/Quake3.jpg" class="img-responsive">
-              <div class="caption"> 
-                  <h4><a href="#">Yolanda Typhon - PH</a>
-                  </h4>
-                  <p>Lots of Houses and Lives were lost and lots of families is in need your unlimited generousity <a href="">Continue reading..</a>.</p>
-              </div> 
-          </div>
-      </div>
-
-      <div class="col-sm-3 col-lg-3 col-md-3">
-          <div class="thumbnail posts">
-              <img src="http://www.hindustantimes.com/Images/popup/2015/4/Quake3.jpg" class="img-responsive">
-              <div class="caption"> 
-                  <h4><a href="#">Yolanda Typhon - PH</a>
-                  </h4>
-                  <p>Lots of Houses and Lives were lost and lots of families is in need your unlimited generousity <a href="">Continue reading..</a>.</p>
-              </div> 
-          </div>
-      </div>
-
-      <div class="col-sm-3 col-lg-3 col-md-3">
-          <div class="thumbnail posts">
-              <img src="http://www.hindustantimes.com/Images/popup/2015/4/Quake3.jpg" class="img-responsive">
-              <div class="caption"> 
-                  <h4><a href="#">Yolanda Typhon - PH</a>
-                  </h4>
-                  <p>Lots of Houses and Lives were lost and lots of families is in need your unlimited generousity <a href="">Continue reading..</a>.</p>
-              </div> 
-          </div>
-      </div>
-
-      <div class="col-sm-3 col-lg-3 col-md-3">
-          <div class="thumbnail posts">
-              <img src="http://www.hindustantimes.com/Images/popup/2015/4/Quake3.jpg" class="img-responsive">
-              <div class="caption"> 
-                  <h4><a href="#">Yolanda Typhon - PH</a>
-                  </h4>
-                  <p>Lots of Houses and Lives were lost and lots of families is in need your unlimited generousity <a href="">Continue reading..</a>.</p>
-              </div> 
-          </div>
-      </div>
-
-      <div class="col-sm-3 col-lg-3 col-md-3">
-          <div class="thumbnail posts">
-              <img src="http://www.hindustantimes.com/Images/popup/2015/4/Quake3.jpg" class="img-responsive">
-              <div class="caption"> 
-                  <h4><a href="#">Yolanda Typhon - PH</a>
-                  </h4>
-                  <p>Lots of Houses and Lives were lost and lots of families is in need your unlimited generousity <a href="">Continue reading..</a>.</p>
-              </div> 
-          </div>
-      </div>
-
-      <div class="col-sm-3 col-lg-3 col-md-3">
-          <div class="thumbnail posts">
-              <img src="http://www.hindustantimes.com/Images/popup/2015/4/Quake3.jpg" class="img-responsive">
-              <div class="caption"> 
-                  <h4><a href="#">Yolanda Typhon - PH</a>
-                  </h4>
-                  <p>Lots of Houses and Lives were lost and lots of families is in need your unlimited generousity <a href="">Continue reading..</a>.</p>
-              </div> 
-          </div>
-      </div>
-      <div class="col-sm-3 col-lg-3 col-md-3">
-          <div class="thumbnail posts">
-              <img src="http://www.hindustantimes.com/Images/popup/2015/4/Quake3.jpg" class="img-responsive">
-              <div class="caption"> 
-                  <h4><a href="#">Yolanda Typhon - PH</a>
-                  </h4>
-                  <p>Lots of Houses and Lives were lost and lots of families is in need your unlimited generousity <a href="">Continue reading..</a>.</p>
-              </div> 
-          </div>
-      </div>  
-      
-      <div class="col-sm-3 col-lg-3 col-md-3">
-          <div class="thumbnail posts">
-              <img src="http://www.hindustantimes.com/Images/popup/2015/4/Quake3.jpg" class="img-responsive">
-              <div class="caption"> 
-                  <h4><a href="#">Yolanda Typhon - PH</a>
-                  </h4>
-                  <p>Lots of Houses and Lives were lost and lots of families is in need your unlimited generousity <a href="">Continue reading..</a>.</p>
-              </div> 
-          </div>
-      </div>
-
-      <div class="col-sm-3 col-lg-3 col-md-3">
-          <div class="thumbnail posts">
-              <img src="http://www.hindustantimes.com/Images/popup/2015/4/Quake3.jpg" class="img-responsive">
-              <div class="caption"> 
-                  <h4><a href="#">Yolanda Typhon - PH</a>
-                  </h4>
-                  <p>Lots of Houses and Lives were lost and lots of families is in need your unlimited generousity <a href="">Continue reading..</a>.</p>
-              </div> 
-          </div>
-      </div>
-
-      <div class="col-sm-3 col-lg-3 col-md-3">
-          <div class="thumbnail posts">
-              <img src="http://www.hindustantimes.com/Images/popup/2015/4/Quake3.jpg" class="img-responsive">
-              <div class="caption"> 
-                  <h4><a href="#">Yolanda Typhon - PH</a>
-                  </h4>
-                  <p>Lots of Houses and Lives were lost and lots of families is in need your unlimited generousity <a href="">Continue reading..</a>.</p>
-              </div> 
-          </div>
-      </div>
-
-      <div class="col-sm-3 col-lg-3 col-md-3">
-          <div class="thumbnail posts">
-              <img src="http://www.hindustantimes.com/Images/popup/2015/4/Quake3.jpg" class="img-responsive">
-              <div class="caption"> 
-                  <h4><a href="#">Yolanda Typhon - PH</a>
-                  </h4>
-                  <p>Lots of Houses and Lives were lost and lots of families is in need your unlimited generousity <a href="">Continue reading..</a>.</p>
-              </div> 
-          </div>
-      </div>
-
-      <div class="col-sm-3 col-lg-3 col-md-3">
-          <div class="thumbnail posts">
-              <img src="http://www.hindustantimes.com/Images/popup/2015/4/Quake3.jpg" class="img-responsive">
-              <div class="caption"> 
-                  <h4><a href="#">Yolanda Typhon - PH</a>
-                  </h4>
-                  <p>Lots of Houses and Lives were lost and lots of families is in need your unlimited generousity <a href="">Continue reading..</a>.</p>
-              </div> 
-          </div>
-      </div>
-
-      <div class="col-sm-3 col-lg-3 col-md-3">
-          <div class="thumbnail posts">
-              <img src="http://www.hindustantimes.com/Images/popup/2015/4/Quake3.jpg" class="img-responsive">
-              <div class="caption"> 
-                  <h4><a href="#">Yolanda Typhon - PH</a>
-                  </h4>
-                  <p>Lots of Houses and Lives were lost and lots of families is in need your unlimited generousity <a href="">Continue reading..</a>.</p>
-              </div> 
-          </div>
-      </div>
-      <div class="col-sm-3 col-lg-3 col-md-3">
-          <div class="thumbnail posts">
-              <img src="http://www.hindustantimes.com/Images/popup/2015/4/Quake3.jpg" class="img-responsive">
-              <div class="caption"> 
-                  <h4><a href="#">Yolanda Typhon - PH</a>
-                  </h4>
-                  <p>Lots of Houses and Lives were lost and lots of families is in need your unlimited generousity <a href="">Continue reading..</a>.</p>
-              </div> 
-          </div>
-      </div>  
+    <?php    
+      foreach ($purpose as $row) {  
+          $description = '';
+          if(strlen($row->description) > 93){ 
+            echo '
+              <div class="col-sm-3 col-lg-3 col-md-3">
+                  <div class="thumbnail posts">
+                      <img src="http://www.hindustantimes.com/Images/popup/2015/4/Quake3.jpg" class="img-responsive">
+                      <div class="caption"> 
+                          <h4><a href="'.base_url().'individual-post">'.$row->name.'</a>
+                          </h4>
+                          <p>'.substr($row->description, 0, 93).' <a href="'.base_url().''.str_replace(' ','-',strtolower($row->org_name)).'/'.$row->url_name.'">Continue reading..</a>.</p>
+                      </div> 
+                  </div>
+              </div>
+            '; 
+          }else{
+            echo '
+              <div class="col-sm-3 col-lg-3 col-md-3">
+                  <div class="thumbnail posts">
+                      <img src="http://www.hindustantimes.com/Images/popup/2015/4/Quake3.jpg" class="img-responsive">
+                      <div class="caption"> 
+                          <h4><a href="'.base_url().'individual-post">'.$row->name.'</a>
+                          </h4>
+                          <p>'.$row->description.' <a href="'.base_url().''.str_replace(' ','-',strtolower($row->org_name)).'/'.$row->url_name.'">Continue reading..</a>.</p>
+                      </div> 
+                  </div>
+              </div>
+            '; 
+          } 
+      } 
+    ?> 
   </div>  
 </div>
 <!-- list of purposes -->
