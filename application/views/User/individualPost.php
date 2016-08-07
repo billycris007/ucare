@@ -57,33 +57,34 @@
                 <div class="col-md-8"> 
                   <h3><strong>Recent Update</strong></h3>
                   <hr>
-
-                  <img class="img-responsive" src="<?php echo base_url()?>assets/image/dummy.jpg" alt="" width="150px" height="150px">
-                  <p>This product was great in terms of quality. I would definitely buy another!</p>
-                  <hr>
-                  
-
-                  <img class="img-responsive" src="http://placehold.it/150x150" alt="">
-                  <p>This product was great in terms of quality. I would definitely buy another!</p>
-                  <hr>
-                  
-
-                  <img class="img-responsive" src="<?php echo base_url()?>assets/image/dummy.jpg" alt="" width="150px" height="150px">
-                  <p>This product was great in terms of quality. I would definitely buy another!</p>
-                  <hr>
-
+                  <?php
+                    foreach ($update_datas as $update) {
+                      foreach ($purpose as $row) {
+                        if($row->purpose_id == $update->purpose_id){ 
+                          echo '<img class="img-responsive" src="<?php echo base_url()?>assets/image/dummy.jpg" alt="" width="150px" height="150px">
+                              <p style="word-break: break-all">'.$update->description.'</p>
+                              <small>'.date('F j, Y', strtotime($update->posted_date)).'</small>
+                              <hr>';
+                        }
+                      }
+                    }
+                  ?> 
                 </div>
                 <div class="col-md-4"> 
                   <div class="scrollable">
                   <?php  
-                    $loop = ' 
-                      <h3 class="text-center"><strong>Billy Bully - $10,000</strong></h3>
-                      <p class="text-center">Hope this can help the needy.</p>
-                      <p class="text-center">Hope this can help the needy.</p>
-                      <hr>
-                    ';
-                    for ($i=0; $i < 20; $i++) { 
-                      echo $loop;
+                    foreach ($trans_datas as $trans) {
+                      $name = ($trans->isUnknown)?$trans->firstname.' '.$trans->lastname:'Anonymous';
+                      foreach ($purpose as $row) {
+                        if($row->purpose_id == $trans->purpose_id){
+                          echo  ' 
+                              <h3 class="text-center"><strong>'.$name.' - '.$trans->amount.'</strong></h3>
+                              <p class="text-center" style="word-break: break-all">'. $trans->message .'</p>
+                              <hr>
+                            ';
+                        }
+                      }
+                      
                     }
                   ?>
                   </div>

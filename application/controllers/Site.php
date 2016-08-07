@@ -22,6 +22,8 @@ class Site extends CU_Controller {
 	{
 		parent::__construct();
 		$this->load->model('purpose_model');
+		$this->load->model('update_model');
+		$this->load->model('transaction_model');
 	}
 
 	protected function allowAnonymous()
@@ -56,7 +58,9 @@ class Site extends CU_Controller {
 
         $purpose_url = $this->uri->segment(2); 
         $data['purpose'] = $this->purpose_model->getUrl($purpose_url);
- 
+        $data['trans_datas'] = $this->transaction_model->get();
+
+        $data['update_datas'] = $this->update_model->get();
 		$this->load->view('User/individualPost',$data);
 		$this->load->view('User/Common/footer');
 	}

@@ -22,7 +22,7 @@ class Update_model extends CU_Model {
 		}
 		$this->db->select('*');
 		$this->db->from($this->tb_name);
-		$this->db->order_by('updates.posted', 'DESC');
+		$this->db->order_by('updates.posted_date', 'DESC');
 		$result = $this->db->get();
 		return $result->result();
 	}

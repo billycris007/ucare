@@ -187,7 +187,7 @@ class Purpose extends CU_Controller {
     public function addPurposeUpdate(){ 
     	// print_r($_FILES);
      //    $path = $this->do_upload(); 
-        $purpose_id = trim($this->input->post('purpose_id'));
+        $purpose_id = trim($this->input->post('purpose_img_id'));
         $description = trim($this->input->post('description')); 
         $data = ['description'=>$description, 'purpose_id'=>$purpose_id, 'image'=>''];
         $this->purpose_model->addUpdate($data);

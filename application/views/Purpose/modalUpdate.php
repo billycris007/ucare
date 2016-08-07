@@ -13,8 +13,8 @@
 		                    </div>  
 		                    <!-- <div class="form-group">
 		                    	<input type="file" name="userfile"/>
-								<input type="hidden" name="purpose_img_id" value="<?php echo $row->purpose_id?>"/> 
-		                    </div>   --> 
+		                    </div>    -->
+							<input type="hidden" name="purpose_img_id" value="<?php echo $row->purpose_id?>"/> 
 		                    <div class="pull-right">
 		                        <button class="btn btn-default" type="reset">Clear All</button>
 		                        <button class="btn btn-primary" type="submit">Update</button>
