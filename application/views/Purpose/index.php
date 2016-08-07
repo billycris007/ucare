@@ -27,9 +27,13 @@
 						                <th>Delivery Date</th>
 						                <th>Funds</th>
 						                <th>Status</th> 
+<<<<<<< HEAD
+						                <th colspan="4" class="text-centers">Action</th> 
+=======
 						                <th></th>
 						                <th></th>
 						                <th></th>
+>>>>>>> 11642a1a60490eb63375997b75b91a09d3ce94ca
 						            </tr>
 						        </thead>
 						        <tfoot>
@@ -72,6 +76,10 @@
 						                </td>
 						                <td><a class="btn btn-warning edit_purpose" data="{'id':'<?= $value->purpose_id ?>'}" href="javascript:void(0)">Edit</a></td>
 						                <td><a class="btn btn-info" href="<?= CuConfig::$siteUrl.str_replace(' ','-',strtolower($value->org_name)).'/'.$value->url_name ?>">Details</a></td>
+<<<<<<< HEAD
+						                <td><a class="btn btn-primary" href="#updatePurpose<?php echo $value->purpose_id?>" data-toggle="modal">Update</a></td>
+=======
+>>>>>>> 11642a1a60490eb63375997b75b91a09d3ce94ca
 						                <td><a class="btn btn-danger remove_purpose" data="{'id':'<?= $value->purpose_id ?>'}" href="javascript:void(0)">Delete</a></td>
 						            </tr>
 						        <?php } ?>

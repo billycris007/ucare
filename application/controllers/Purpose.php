@@ -38,6 +38,7 @@ class Purpose extends CU_Controller {
 		$this->load->view('template/header',$data);
 		$this->load->view('template/topbar');
 		$this->load->view('template/leftnav');
+		$this->load->view('Purpose/modalUpdate',$data);
 		$this->load->view('Purpose/index',$data);
 		$this->load->view('template/footer');
 	}
@@ -181,6 +182,16 @@ class Purpose extends CU_Controller {
                 if(move_uploaded_file($_FILES["userfile"]["tmp_name"],$url))
                     return $url;
         return "";
+    }
+
+    public function addPurposeUpdate(){ 
+    	// print_r($_FILES);
+     //    $path = $this->do_upload(); 
+        $purpose_id = trim($this->input->post('purpose_id'));
+        $description = trim($this->input->post('description')); 
+        $data = ['description'=>$description, 'purpose_id'=>$purpose_id, 'image'=>''];
+        $this->purpose_model->addUpdate($data);
+        redirect(CuConfig::$siteUrl.'purpose', 'refresh'); 
     }
 	
 }

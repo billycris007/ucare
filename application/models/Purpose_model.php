@@ -57,5 +57,11 @@ class Purpose_model extends CU_Model {
     		$update = array('purpose_image' => $path); 
 		return $this->db->update($this->tb_name,$update,array('purpose_id'=>$id));  
         }
+
+    public function addUpdate($data){
+    	self::$dbConnection->insert('updates',$data);
+		return $this->getLastInserted();
+
+    }
 }
 ?>
