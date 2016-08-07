@@ -9,7 +9,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://ucare.dev/" class="navbar-brand">
+            <a class="navbar-brand" href="<?= CuConfig::$siteUrl; ?>/user" class="navbar-brand">
                 <img width="150px" height="150px" class="img-responsive" src="http://ucare.dev/ucare.png">
             </a>
         </div>
