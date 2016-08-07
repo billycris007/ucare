@@ -4,7 +4,9 @@ body {
     height: 100%;
     background: #fff;
 } 
-
+td.img_updload form:hover{
+  display: block!important;
+}
 .navbar-brand {
   margin-left: 30px;
   margin-top: -8px;
@@ -257,11 +259,11 @@ section {
 /*other posts carousel*/
 
 /*individual post*/
-.scrollable { 
-    height: 100%;
-    overflow: auto;
-    background: #fff;
-    padding: 5px;
+.scrollable {
+  background: #fff none repeat scroll 0 0;
+  max-height: 1000px;
+  overflow-y: scroll;
+  padding: 5px;
 }
 .indiHeader {
   max-width: 1266px;

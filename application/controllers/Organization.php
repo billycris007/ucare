@@ -23,6 +23,7 @@ class Organization extends CU_Controller {
 	{
 		parent::__construct();
 		$this->load->model('organization_model');
+		$this->load->model('useradmin_model');
 	}
 
 	protected function allowAnonymous()
@@ -34,6 +35,7 @@ class Organization extends CU_Controller {
 	{
 		$data['title'] = 'UCare';
 		$data['list'] = $this->organization_model->get();
+		
 		$this->load->view('template/header',$data);
 		$this->load->view('template/topbar');
 		$this->load->view('template/leftnav');
@@ -65,15 +67,18 @@ class Organization extends CU_Controller {
 		{
 			$name = trim($this->input->post('org_name'));
 			$desc = trim($this->input->post('org_desc'));
+			$user_id = trim($this->input->post('user_id'));
 
 			$data = array('org_name' => $name,
-					'org_description' => $desc
+					'org_description' => $desc,
+					'user_id' => $user_id
 					);
 			$id = $this->organization_model->insert($data);
 			// redirect to table
 			redirect(CuConfig::$siteUrl.'organization', 'refresh'); 
 		}else{
 			$data['title'] = 'UCare';
+			$data['users'] = $this->useradmin_model->get();
 			$this->load->view('template/header',$data);
 			$this->load->view('template/topbar');
 			$this->load->view('template/leftnav');
@@ -105,6 +110,7 @@ class Organization extends CU_Controller {
 		if($this->input->server('REQUEST_METHOD') == 'POST' && (isset($e)&& $e!=0))
 		{
 			$ret['data'] = $this->organization_model->get($id);
+			$ret['users'] = $this->useradmin_model->get();
 			$data =  json_encode($this->load->view('organization/addOrganization',$ret, TRUE));
 			$result = '{"d":'.$data.',"m":"","e":"0"}';
 			echo $result;
@@ -113,9 +119,11 @@ class Organization extends CU_Controller {
 		{
 			$name = trim($this->input->post('org_name'));
 			$desc = trim($this->input->post('org_desc'));
+			$user_id = trim($this->input->post('user_id'));
 
 			$data = array('org_name' => $name,
-					'org_description' => $desc
+					'org_description' => $desc,
+					'user_id' => $user_id
 					);
 			$id = $this->organization_model->update($id,$data);
 			if($id){
