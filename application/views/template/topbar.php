@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-            </button>
+            </button> 
             <a class="navbar-brand" href="<?= CuConfig::$siteUrl; ?>" class="navbar-brand">
                 <img width="150px" height="150px" class="img-responsive" src="<?php echo base_url()?>ucare.png">
             </a>
