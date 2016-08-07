@@ -13,8 +13,17 @@
 	            </div>
 	            <!-- /.panel-heading -->
 	            <div class="panel-body">
-	            	<form id="frm" role="form" action="<?= CuConfig::$siteUrl?>purpose/addPurpose" method="POST">
+	            	<form id="frm" role="form" action="<?= CuConfig::$siteUrl?>addPurpose" method="POST">
 	            		<input id="e" name="e" value="1" type="hidden">
+	            		<div class="form-group">
+                            <label>Organization <span class="text-danger"> *</span></label>
+                            <select required class="form-control" name="org_id">
+                                <?php foreach ($purpose as  $val) {?>
+                                <option value="<?= $val->org_id; ?>"><?= $val->org_name; ?></option>
+                                <?php } ?>
+                            </select>
+                        </div>
+
                         <div class="form-group">
                             <label>Purpose Name <span class="text-danger"> *</span></label>
                             <input required class="form-control" name="p_name" value="<?php echo isset($data[0])?$data[0]->name:''; ?>">

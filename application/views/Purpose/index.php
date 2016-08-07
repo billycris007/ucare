@@ -22,13 +22,12 @@
 						                <th>Purpose Image</th>
 						                <th>Purpose Name</th>
 						                <th>Type</th>
+						                <th>Organization Name</th>
 						                <th>Description</th>
 						                <th>Delivery Date</th>
 						                <th>Funds</th>
-						                <th>Status</th>
-						                <th></th>
-						                <th></th>
-						                <th></th>
+						                <th>Status</th> 
+						                <th colspan="4" class="text-centers">Action</th> 
 						            </tr>
 						        </thead>
 						        <tfoot>
@@ -39,15 +38,26 @@
 									$new_duedate = date_format($date,"F d, Y");
 								?>
 						            <tr>
-						            	<td width="10px">
-						            		<form action="<?php echo base_url().'upload-img'?>" method="POST" enctype="multipart/form-data">
+						            	<td width="10px" class="img_updload">
+						            		<?php 
+						            		if($value->purpose_image){ 
+						            			$display = 'display:none';
+						            			$image = 'display:block';
+						            		}else{
+												$display = 'display:block';
+												$image = 'display:none';
+											} 
+											?>
+											<form style="<?= $display; ?>" action="<?php echo base_url().'upload-img'?>" method="POST" enctype="multipart/form-data">
 												<input type="file" name="userfile">
 												<input type="hidden" name="purpose_img_id" value="<?= $value->purpose_id?>"> 
 											<button type="submit" class="btn btn-xs btn-primary">Upload</button>
 											</form>
+											<img style="<?= $image; ?> ;margin: 0 auto; width: 200px;" class="img-responsive" src="<?= base_url().$value->purpose_image; ?>">
 						            	</td>
 						                <td><?= $value->name; ?></td>
 						                <td><?= $value->type; ?></td>
+						                <td><?= $value->org_name; ?></td>
 						                <td><?= $value->description; ?></td>
 						                <td><?= $new_duedate; ?></td>
 						                <td><?= ($value->funds)?number_format($value->funds,2):'0.00'; ?></td>
@@ -59,7 +69,8 @@
 						                	<?php } ?>
 						                </td>
 						                <td><a class="btn btn-warning edit_purpose" data="{'id':'<?= $value->purpose_id ?>'}" href="javascript:void(0)">Edit</a></td>
-						                <td><a class="btn btn-info" href="#">Details</a></td>
+						                <td><a class="btn btn-info" href="<?= CuConfig::$siteUrl.str_replace(' ','-',strtolower($value->org_name)).'/'.$value->url_name ?>">Details</a></td>
+						                <td><a class="btn btn-primary" href="#updatePurpose<?php echo $value->purpose_id?>" data-toggle="modal">Update</a></td>
 						                <td><a class="btn btn-danger remove_purpose" data="{'id':'<?= $value->purpose_id ?>'}" href="javascript:void(0)">Delete</a></td>
 						            </tr>
 						        <?php } ?>

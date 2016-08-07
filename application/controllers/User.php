@@ -81,6 +81,7 @@ class User extends CU_Controller {
 
 			$data = array('firstname' => $firstname,
 					'lastname' => $lastname,
+					'password' => '12345',
 					'email' => $email,
 					'user_type' => $type,
 					);

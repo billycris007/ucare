@@ -16,6 +16,15 @@
 	            	<form id="frm" role="form" action="<?= CuConfig::$siteUrl?>addOrganization" method="POST">
 	            		<input id="e" name="e" value="1" type="hidden">
                         <div class="form-group">
+                            <label>User <span class="text-danger"> *</span></label>
+                            <select required class="form-control" name="user_id" value="<?php echo isset($data[0])?$data[0]->type:''; ?>">
+                               <?php foreach($users as $user){ ?> 
+                                <option value="<?= $user->user_id; ?>"><?= $user->firstname.' '.$user->lastname; ?></option>
+                                <?php } ?>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
                             <label>Organization Name <span class="text-danger"> *</span></label>
                             <input required class="form-control" name="org_name" value="<?php echo isset($data[0])?$data[0]->org_name:''; ?>">
                         </div>

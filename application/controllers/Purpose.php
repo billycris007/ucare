@@ -23,6 +23,7 @@ class Purpose extends CU_Controller {
 	{
 		parent::__construct();
 		$this->load->model('purpose_model');
+		$this->load->model('organization_model');
 	}
 
 	protected function allowAnonymous()
@@ -37,6 +38,7 @@ class Purpose extends CU_Controller {
 		$this->load->view('template/header',$data);
 		$this->load->view('template/topbar');
 		$this->load->view('template/leftnav');
+		$this->load->view('Purpose/modalUpdate',$data);
 		$this->load->view('Purpose/index',$data);
 		$this->load->view('template/footer');
 	}
@@ -67,11 +69,13 @@ class Purpose extends CU_Controller {
 			$type = trim($this->input->post('p_type'));
 			$duedate = trim($this->input->post('p_duedate'));
 			$desc = trim($this->input->post('p_desc'));
+			$org_id = trim($this->input->post('org_id'));
 
 			$date = date_create($duedate);
 			$new_duedate = date_format($date,"Y-m-d");
 
 			$data = array('name' => $name,
+					'org_id' => $org_id,
 					'description' => $desc,
 					'long_lat' => '10.315699:123.885437',
 					'type' => $type,
@@ -83,10 +87,11 @@ class Purpose extends CU_Controller {
 			redirect(CuConfig::$siteUrl.'purpose', 'refresh'); 
 		}else{
 			$data['title'] = 'UCare';
+			$data['purpose'] = $this->organization_model->get();
 			$this->load->view('template/header',$data);
 			$this->load->view('template/topbar');
 			$this->load->view('template/leftnav');
-			$this->load->view('Purpose/addPurpose');
+			$this->load->view('Purpose/addPurpose',$data);
 			$this->load->view('template/footer');
 		}
 	}
@@ -124,11 +129,13 @@ class Purpose extends CU_Controller {
 			$type = trim($this->input->post('p_type'));
 			$duedate = trim($this->input->post('p_duedate'));
 			$desc = trim($this->input->post('p_desc'));
+			$org_id = trim($this->input->post('org_id'));
 
 			$date = date_create($duedate);
 			$new_duedate = date_format($date,"Y-m-d");
 
 			$data = array('name' => $name,
+					'org_id' => $org_id,
 					'description' => $desc,
 					'long_lat' => '10.315699:123.885437',
 					'type' => $type,
@@ -159,11 +166,11 @@ class Purpose extends CU_Controller {
    		return strTolower(preg_replace('/[^A-Za-z0-9\-]/', '', $string)); // Removes special chars.
 	}
 
-	   public function save(){
+	  public function save(){
         $path = $this->do_upload();
         $id = trim($this->input->post('purpose_img_id'));
-       // $id = $_POST["purpose_img_id"];
         $this->purpose_model->save($id, $path);
+        redirect(CuConfig::$siteUrl.'purpose', 'refresh'); 
     }
 
     public function do_upload(){ 
@@ -175,6 +182,16 @@ class Purpose extends CU_Controller {
                 if(move_uploaded_file($_FILES["userfile"]["tmp_name"],$url))
                     return $url;
         return "";
+    }
+
+    public function addPurposeUpdate(){ 
+    	// print_r($_FILES);
+     //    $path = $this->do_upload(); 
+        $purpose_id = trim($this->input->post('purpose_id'));
+        $description = trim($this->input->post('description')); 
+        $data = ['description'=>$description, 'purpose_id'=>$purpose_id, 'image'=>''];
+        $this->purpose_model->addUpdate($data);
+        redirect(CuConfig::$siteUrl.'purpose', 'refresh'); 
     }
 	
 }
