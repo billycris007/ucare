@@ -12,7 +12,8 @@
                 <div class="caption-full">
                   <div class="row">
                     <div class="col-md-8">
-                    <?php  
+                    <?php
+                        $purposeName = $row->name;
                         echo ' 
                           <h1><strong><a href="">'.$row->name.' - '.$row->org_name.'</a></strong> <br><p><small>'.date('F j, Y', strtotime($row->created_date)).'</small></p>
                           </h1>
@@ -29,7 +30,7 @@
                           <h3><strong>Donate</strong></h3>
                         </div>
                         <div class="col-md-6">
-                          <p><a href=""><img src="<?php echo base_url()?>assets/image/icon-donate.png" class="img-responsive" width="80px"></a></p>
+                          <p><a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=ZH52X6NBZS7TA&lc=PH&item_name=<?php echo $purposeName." Donation"; ?>&item_number=mrumbz1&currency_code=PHP&bn=PP-DonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="<?php echo base_url()?>assets/image/icon-donate.png" class="img-responsive" width="80px"></a></p>
                         </div>
                       </div>
                       <hr>
