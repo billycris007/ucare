@@ -26,7 +26,7 @@
 						                <th>Description</th>
 						                <th>Delivery Date</th>
 						                <th>Funds</th>
-						                <th>Status</th>
+						                <th>Status</th> 
 						                <th></th>
 						                <th></th>
 						                <th></th>
